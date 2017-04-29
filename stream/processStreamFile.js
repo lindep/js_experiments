@@ -18,7 +18,8 @@ highland(fs.createReadStream('file.txt','utf8'))
   .map(line=>line.split(","))
   .map(parts=>({
     name:parts[0],
-    val:parts[1]
-  })).
-  filter(obj=>obj.val>10)
+    val:parseInt(parts[1])
+  }))
+  .filter(obj=>obj.val>1)
+  .ratelimit(1, 1000)
   .each(x=>console.log('line:',x))
