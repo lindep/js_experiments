@@ -1,0 +1,25 @@
+{
+  "name": "test-stream",
+  "version": "1.0.0",
+  "description": "experiments with streams",
+  "main": "custStream.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lindep/js_experiments.git"
+  },
+  "keywords": [
+    "node.js"
+  ],
+  "author": "Pieter Linde",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lindep/js_experiments/issues"
+  },
+  "homepage": "https://github.com/lindep/js_experiments#readme",
+  "dependencies": {
+    "highland": "^2.10.5"
+  }
+}
