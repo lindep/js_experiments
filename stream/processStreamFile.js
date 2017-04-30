@@ -15,7 +15,7 @@ highland(fs.createReadStream('file.txt','utf8'))
 highland(fs.createReadStream('file.txt','utf8'))
   .split()
   .filter(line => line.length) //return true length > 0
-  .map(line=>line.split(","))
+  .map(line=>line.split(','))
   .map(parts=>({
     name:parts[0],
     val:parseInt(parts[1])
