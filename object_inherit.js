@@ -45,6 +45,15 @@ CustObj.prototype.method1 = function() {
 	console.log('from custObj.method1');
 }
 
+var obj2 = {
+	objMethod1: function() {
+		console.log('from obj2.method1');
+	},
+	objMethod2: () => {
+		console.log('from obj2.method1');
+	}
+}
+
 var testCustObj = CustObj();
 Object.assign(testCustObj, obj2)
 testCustObj.on('event',(e)=>{console.log('from listener')})
