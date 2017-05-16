@@ -22,8 +22,8 @@ function CustObj() {
 	var custObj = Object.create(Object.assign(CustObj.prototype, objA));
 	var prop = "test";
 	custObj.get = function() {
-		if (arguments.length) return prop;
 		console.log('prop =', prop);
+		return prop;
 	}
 	return custObj;
 }

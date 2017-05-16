@@ -5,6 +5,13 @@ var obj = {
 		console.log('from obj.method1');
 	}
 }
+var objA = {
+	x:0,
+	y:0,
+	show() {
+		console.log(this.x,this.y)
+	}
+}
 
 // create method "method1" on the prototype
 var myObj = Object.create(obj);
@@ -14,7 +21,11 @@ function CustObj() {
 	var custObj = Object.create(CustObj.prototype);
 	var prop = "test";
 	custObj.get = function() {
-		if (arguments.length) return prop;
+		console.log('prop =', prop);
+		return prop;
+	}
+	custObj.set = function(val) {
+		if (arguments.length) prop = val;
 		console.log('prop =', prop);
 	}
 	return custObj;
@@ -33,4 +44,4 @@ testCustObj.method1();
 console.log(CustObj.prototype.isPrototypeOf(testCustObj));
 console.log(testCustObj.get());
 
-newObj = Object.assign(testCustObj, obj, objA)
+var newObj = Object.assign(testCustObj, obj, objA)
